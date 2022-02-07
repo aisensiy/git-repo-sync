@@ -15,6 +15,9 @@ inputs:
   target-token:
     description: 'Target Token'
     required: true
+  target-branch:
+    description: 'Targe Branch'
+    required: true
 runs:
   using: "composite"
   steps:
@@ -24,4 +27,6 @@ runs:
         INPUT_TARGET_URL: ${{ inputs.target-url }}
         INPUT_TARGET_USERNAME: ${{ inputs.target-username }}
         INPUT_TARGET_TOKEN: ${{ inputs.target-token }}
+        INPUT_TARGET_BRANCH: ${{ inputs.target-branch }}
         GITHUB_EVENT_REF: ${{ github.event.ref }}
+        
